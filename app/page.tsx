@@ -56,7 +56,7 @@ export default function Home() {
           <article className="menu-card"><div className="menu-photo"><img src={photos.food} alt="A beautifully plated meal"/></div><div className="menu-meta"><span>01 / FOOD</span><span>EXPLORE THE MENU ↗</span></div><h3>Something<br/><em>delicious.</em></h3><p>From relaxed bites to a meal worth dressing up for. Ask our team for the current menu.</p></article>
           <article className="menu-card menu-card-offset"><div className="menu-photo"><img src={photos.cocktail} alt="Craft cocktail in a glass"/></div><div className="menu-meta"><span>02 / DRINKS</span><span>THE BAR ↗</span></div><h3>Raise a<br/><em>glass.</em></h3><p>Settle in with a favourite pour or let the evening lead you to something new.</p></article>
         </div>
-        <div className="menu-note"><span>THE MENU CHANGES. THE MOMENT IS YOURS.</span><a href={wa}>ASK ABOUT TODAY'S MENU <ArrowUpRight size={14}/></a></div>
+        <div className="menu-note"><span>THE MENU CHANGES. THE MOMENT IS YOURS.</span><a href="#full-menu">VIEW FULL FOOD MENU <ArrowUpRight size={14}/></a></div>
       </section>
 
       <section className="quote-band"><div className="quote-inner"><span className="quote-mark">“</span><p>Some views are better<br/>when <em>shared.</em></p><span className="quote-caption">GOOD COMPANY LOOKS GOOD FROM UP HERE</span></div></section>
