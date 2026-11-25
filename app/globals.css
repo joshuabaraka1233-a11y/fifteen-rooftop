@@ -90,3 +90,33 @@
  .drink-panel{margin-bottom:38px}
  .house-rules h2{font-size:58px}
 }
+
+
+/* Drinks heading alignment and consistent section navigation */
+.full-menu-head .eyebrow{display:block;text-align:center;line-height:1.7;white-space:normal}
+.full-menu-head .eyebrow span{display:inline-block;margin-left:8px;white-space:nowrap;vertical-align:baseline}
+.drinks-section .full-menu-head{margin-bottom:64px}
+.drinks-section .full-menu-head h2{margin:18px 0 18px;line-height:1.08}
+.drinks-section .full-menu-head>p:last-child{margin:0 auto;max-width:440px}
+.header{gap:22px}
+.desktop-nav{flex:1;justify-content:center;gap:clamp(8px,1.25vw,18px);min-width:0}
+.desktop-nav button{white-space:nowrap;font-size:clamp(8px,.78vw,10px);letter-spacing:.25px}
+.header-cta{flex-shrink:0;padding:12px 13px;font-size:9px}
+html{scroll-padding-top:105px}
+section[id]{scroll-margin-top:105px}
+@media(max-width:1100px) and (min-width:681px){
+ .header{padding-left:3%;padding-right:3%;gap:12px}
+ .desktop-nav{gap:8px}
+ .desktop-nav button{font-size:8px;letter-spacing:0}
+ .header-cta{padding:10px 9px;font-size:8px;gap:7px}
+ .brand{gap:7px}
+ .brand-mark{width:40px;height:40px;font-size:29px}
+ .brand-name{font-size:11px;letter-spacing:2px}
+}
+@media(max-width:680px){
+ .full-menu-head .eyebrow{font-size:9px;letter-spacing:1.6px}
+ .drinks-section .full-menu-head{margin-bottom:46px}
+ .drinks-section .full-menu-head h2{margin:16px 0;font-size:54px}
+ html{scroll-padding-top:86px}
+ section[id]{scroll-margin-top:86px}
+}
