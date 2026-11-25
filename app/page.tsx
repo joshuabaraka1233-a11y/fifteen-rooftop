@@ -20,11 +20,20 @@ function MenuLine({name,price}:{name:string,price:string}){return <div className
 export default function Home() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("Home");
-  const links = ["Home", "The Experience", "Menu", "Moments", "Find Us"];
-  const go = (label: string) => {
+  const links = [
+    { label: "Home", id: "home" },
+    { label: "Our Story", id: "our-story" },
+    { label: "Experience", id: "the-experience" },
+    { label: "Food Menu", id: "full-menu" },
+    { label: "Drinks", id: "drinks" },
+    { label: "Moments", id: "moments" },
+    { label: "Find Us", id: "find-us" },
+    { label: "House Rules", id: "house-rules" },
+  ];
+  const go = (label: string, id: string) => {
     setActive(label);
     setOpen(false);
-    document.getElementById(label.toLowerCase().replaceAll(" ", "-"))?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
@@ -32,11 +41,11 @@ export default function Home() {
       <div className="topline"><span>NAIROBI · KENYA</span><span>15TH FLOOR · THE CURVE BY THE PARK</span><a href={wa}>RESERVATIONS <ArrowUpRight size={12}/></a></div>
       <header className="header">
         <a className="brand" href="#home" aria-label="Fifteen Rooftop home"><span className="brand-mark">15</span><span className="brand-name">FIFTEEN<span>ROOFTOP</span></span></a>
-        <nav className="desktop-nav">{links.map((l) => <button key={l} className={active === l ? "nav-active" : ""} onClick={() => go(l)}>{l}</button>)}</nav>
+        <nav className="desktop-nav">{links.map((l) => <button key={l.id} className={active === l.label ? "nav-active" : ""} onClick={() => go(l.label, l.id)}>{l.label}</button>)}</nav>
         <a className="header-cta" href={wa}>BOOK A TABLE <ArrowUpRight size={14}/></a>
         <button className="mobile-toggle" aria-label="Toggle menu" onClick={() => setOpen(!open)}>{open ? <X/> : <MenuIcon/>}</button>
       </header>
-      {open && <div className="mobile-menu">{links.map(l => <button key={l} onClick={() => go(l)}>{l}</button>)}<a href={wa}>BOOK A TABLE ↗</a></div>}
+      {open && <div className="mobile-menu">{links.map(l => <button key={l.id} onClick={() => go(l.label, l.id)}>{l.label}</button>)}<a href={wa}>BOOK A TABLE ↗</a></div>}
 
       <section className="hero" id="home" style={{ backgroundImage: `linear-gradient(90deg,rgba(9,13,12,.78),rgba(9,13,12,.2) 65%,rgba(9,13,12,.12)),url(${photos.hero})` }}>
         <div className="hero-content"><p className="eyebrow"><span/> ELEVATE YOUR EVENING</p><h1>Above the<br/><em>ordinary.</em></h1><p className="hero-copy">A different perspective on Nairobi. Good food, considered drinks and a view worth slowing down for.</p><div className="hero-actions"><a className="button button-gold" href={wa}>RESERVE YOUR MOMENT <ArrowUpRight size={16}/></a><a className="text-link" href="#the-experience">DISCOVER FIFTEEN <ArrowDown size={14}/></a></div></div>
