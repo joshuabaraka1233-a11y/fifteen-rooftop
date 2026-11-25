@@ -169,3 +169,30 @@ section[id]{scroll-margin-top:112px}
  html{scroll-behavior:auto}
  .has-scroll-reveal .scroll-reveal{opacity:1;transform:none;transition:none}
 }
+
+/* Dedicated main-section navigation panel */
+.section-nav{
+  position:sticky;top:86px;z-index:4;
+  display:flex;align-items:center;justify-content:center;gap:clamp(14px,2.1vw,30px);
+  min-height:48px;padding:0 4%;
+  background:rgba(15,24,19,.97);color:#e9e4d8;
+  border-bottom:1px solid rgba(210,173,104,.28);
+  box-shadow:0 8px 22px rgba(0,0,0,.12);
+  backdrop-filter:blur(14px);
+}
+.section-nav-label{font-size:8px;letter-spacing:2px;color:#d2ad68;font-weight:700;margin-right:4px}
+.section-nav a{font-size:9px;letter-spacing:.45px;color:#c7c6bc;white-space:nowrap;transition:color .2s ease}
+.section-nav a:hover,.section-nav a:focus-visible{color:#e2bd79}
+.section-nav .section-nav-book{color:#e1bd79;font-weight:700;border-left:1px solid rgba(255,255,255,.2);padding-left:22px}
+@media(max-width:1100px) and (min-width:681px){
+ .section-nav{justify-content:flex-start;gap:17px;overflow-x:auto;padding:0 3%;scrollbar-width:none}
+ .section-nav::-webkit-scrollbar{display:none}
+ .section-nav a{font-size:8px}
+}
+@media(max-width:680px){
+ .section-nav{top:74px;justify-content:flex-start;gap:20px;min-height:46px;padding:0 6%;overflow-x:auto;scrollbar-width:none}
+ .section-nav::-webkit-scrollbar{display:none}
+ .section-nav-label{position:sticky;left:0;background:#0f1813;padding:7px 5px 7px 0;z-index:1}
+ .section-nav a{font-size:9px}
+ .section-nav .section-nav-book{padding-left:18px}
+}
