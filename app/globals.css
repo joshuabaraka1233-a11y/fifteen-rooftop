@@ -29,3 +29,64 @@
   .visit-button{width:100%}
   .footer-links a{padding:7px 0}
 }
+
+
+/* Full FIFTEEN menu, story and guest information */
+.story-section{background:#f5f1e8}
+.story-copy{max-width:760px;margin:55px auto 70px;text-align:center}
+.story-copy h2,.full-menu-head h2,.house-rules h2{font:500 clamp(52px,6vw,82px)/1.02 'Playfair Display',serif;letter-spacing:-2px;margin:18px 0 28px}
+.story-copy h2 em,.full-menu-head h2 em,.house-rules h2 em{font-weight:700;color:#98743b}
+.story-copy>p:not(.eyebrow){font-size:14px;line-height:2.05;color:#64645c;margin:0 auto 22px;max-width:720px}
+.story-signoff{display:block;color:#98743b;font:italic 22px 'Playfair Display',serif;margin-top:32px}
+.story-pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.story-pillars article{padding:32px 28px;background:#eae4d7;border-top:2px solid #b9975b}
+.story-pillars article>span{font-size:10px;letter-spacing:2px;color:#9b7a43}
+.story-pillars h3{font:500 27px 'Playfair Display',serif;margin:16px 0 12px}
+.story-pillars p{font-size:12px;line-height:1.9;color:#65665e;margin:0}
+.full-menu{background:#e9e4d9}
+.full-menu-head{max-width:620px;margin:0 auto 58px;text-align:center}
+.full-menu-head .eyebrow{justify-content:center}
+.full-menu-head>p:last-child{font-size:13px;line-height:1.8;color:#66665e}
+.food-menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:6%}
+.food-menu-column{min-width:0}
+.food-group{margin:0 0 48px}
+.food-group>h3,.drink-panel>h3{font:600 22px 'Playfair Display',serif;color:#85683b;border-bottom:1px solid #b8a98e;padding-bottom:12px;margin:0 0 22px}
+.food-item{padding:0 0 19px;margin:0 0 18px;border-bottom:1px solid rgba(110,98,77,.16)}
+.food-item-top{display:flex;justify-content:space-between;gap:16px;align-items:baseline}
+.food-item h4{font:700 14px 'DM Sans',sans-serif;margin:0;color:#20251f}
+.food-item-top b,.menu-line b{font-size:12px;color:#8b6b36;white-space:nowrap}
+.food-item p{font-size:11px;line-height:1.7;color:#6b6b63;margin:7px 0 0;max-width:95%}
+.menu-disclaimer{text-align:center;font-size:10px;letter-spacing:.4px;color:#81775f;margin:20px auto 0}
+.drinks-section{background:#121b34;color:#f3eee4}
+.drinks-section .full-menu-head>p:last-child{color:#c6c6c4}
+.drinks-section .full-menu-head h2 em{color:#d9b36f}
+.drinks-section .eyebrow{color:#d9b36f}
+.drinks-grid{display:grid;grid-template-columns:1fr 1fr;gap:8%}
+.drink-panel>h3{color:#dfbd7e;border-color:rgba(220,188,126,.4);margin:0 0 20px}
+.drink-panel>h3:not(:first-child){margin-top:42px}
+.menu-line{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.menu-line span{font-size:11px;line-height:1.6;color:#e2dfd7}
+.menu-line b{color:#e1bd79}
+.drink-note,.drinks-note{font-size:10px;line-height:1.8;color:#b9b9b4}
+.drinks-note{text-align:center;border-top:1px solid rgba(255,255,255,.15);padding-top:22px;margin-top:48px}
+.house-rules{background:#111a16;color:#f1ede4}
+.house-rules .eyebrow{color:#d7b574}
+.house-rules h2 em{color:#d7b574}
+.rules-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 7%;margin-top:50px}
+.rule-item{display:flex;gap:18px;align-items:flex-start;border-top:1px solid rgba(255,255,255,.15);padding:18px 0}
+.rule-item>span{font-size:10px;color:#d6b576;letter-spacing:1px;padding-top:3px}
+.rule-item p{font-size:12px;line-height:1.75;color:#d0d0c7;margin:0}
+@media(max-width:680px){
+ .story-copy{margin:38px auto 48px}
+ .story-pillars,.food-menu-grid,.drinks-grid,.rules-grid{grid-template-columns:1fr;gap:0}
+ .story-pillars{gap:12px}
+ .story-pillars article{padding:26px 22px}
+ .full-menu-head{margin-bottom:42px}
+ .food-group{margin-bottom:38px}
+ .food-item-top{align-items:flex-start}
+ .food-item h4{font-size:13px}
+ .food-item-top b{font-size:11px}
+ .drinks-section .full-menu-head h2{font-size:58px}
+ .drink-panel{margin-bottom:38px}
+ .house-rules h2{font-size:58px}
+}
