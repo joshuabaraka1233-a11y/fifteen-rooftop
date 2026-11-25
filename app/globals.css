@@ -196,3 +196,31 @@ section[id]{scroll-margin-top:112px}
  .section-nav a{font-size:9px}
  .section-nav .section-nav-book{padding-left:18px}
 }
+
+
+/* Make the primary header the visible all-sections navigation panel */
+.header{
+  display:flex;align-items:center;gap:clamp(10px,1.4vw,20px);
+  padding-left:4%;padding-right:4%;
+}
+.desktop-nav{
+  display:flex;flex:1;min-width:0;justify-content:center;
+  align-items:center;gap:clamp(8px,1.15vw,16px);
+}
+.desktop-nav button{
+  display:inline-flex;align-items:center;white-space:nowrap;
+  font-size:clamp(8px,.78vw,10px);letter-spacing:.15px;
+}
+.header-cta{flex-shrink:0;white-space:nowrap}
+@media(min-width:901px){
+  .header{gap:12px}
+  .brand{flex-shrink:0}
+}
+@media(max-width:900px) and (min-width:681px){
+  .header{gap:10px}
+  .brand-mark{width:39px;height:39px;font-size:28px}
+  .brand-name{font-size:10px;letter-spacing:1.8px}
+  .desktop-nav{gap:7px}
+  .desktop-nav button{font-size:8px}
+  .header-cta{padding:9px 8px;font-size:8px;gap:5px}
+}
