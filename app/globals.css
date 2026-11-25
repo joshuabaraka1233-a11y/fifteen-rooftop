@@ -224,3 +224,33 @@ section[id]{scroll-margin-top:112px}
   .desktop-nav button{font-size:8px}
   .header-cta{padding:9px 8px;font-size:8px;gap:5px}
 }
+
+
+/* Clear two-tier desktop navigation: identity/actions above, section links below */
+@media (min-width:681px){
+  .header{
+    height:auto;min-height:112px;
+    display:grid;
+    grid-template-columns:minmax(170px,1fr) auto;
+    grid-template-areas:"brand cta" "nav nav";
+    align-items:center;column-gap:24px;row-gap:0;
+    padding:10px 4% 0;
+  }
+  .header>.brand{grid-area:brand;justify-self:start}
+  .header>.header-cta{grid-area:cta;justify-self:end}
+  .header>.desktop-nav{
+    grid-area:nav;width:100%;min-width:0;
+    min-height:42px;display:flex;justify-content:center;align-items:center;
+    gap:clamp(15px,2.2vw,30px);
+    border-top:1px solid rgba(255,255,255,.12);
+    margin-top:8px;
+  }
+  .header>.desktop-nav button{
+    font-size:10px;letter-spacing:.35px;padding:12px 0;
+  }
+}
+@media (min-width:681px) and (max-width:900px){
+  .header{grid-template-columns:minmax(145px,1fr) auto;padding-left:3%;padding-right:3%}
+  .header>.desktop-nav{gap:clamp(9px,1.5vw,14px)}
+  .header>.desktop-nav button{font-size:9px}
+}
