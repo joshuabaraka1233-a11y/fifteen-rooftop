@@ -46,6 +46,20 @@ export default function Home() {
         <button className="mobile-toggle" aria-label="Toggle menu" onClick={() => setOpen(!open)}>{open ? <X/> : <MenuIcon/>}</button>
       </header>
       {open && <div className="mobile-menu">{links.map(l => <button key={l.id} onClick={() => go(l.label, l.id)}>{l.label}</button>)}<a href={wa}>BOOK A TABLE ↗</a></div>}
+      <nav className="section-nav" aria-label="Explore Fifteen sections">
+        <span className="section-nav-label">EXPLORE</span>
+        {[
+          { label: "Home", id: "home" },
+          { label: "Our Story", id: "our-story" },
+          { label: "Experience", id: "the-experience" },
+          { label: "Food Menu", id: "full-menu" },
+          { label: "Drinks Menu", id: "drinks" },
+          { label: "Moments", id: "moments" },
+          { label: "Find Us", id: "find-us" },
+          { label: "House Rules", id: "house-rules" },
+        ].map(item => <a key={item.id} href={`#${item.id}`}>{item.label}</a>)}
+        <a className="section-nav-book" href={wa}>BOOK A TABLE ↗</a>
+      </nav>
 
       <section className="hero" id="home" style={{ backgroundImage: `linear-gradient(90deg,rgba(9,13,12,.78),rgba(9,13,12,.2) 65%,rgba(9,13,12,.12)),url(${photos.hero})` }}>
         <div className="hero-content"><p className="eyebrow"><span/> ELEVATE YOUR EVENING</p><h1>Above the<br/><em>ordinary.</em></h1><p className="hero-copy">A different perspective on Nairobi. Good food, considered drinks and a view worth slowing down for.</p><div className="hero-actions"><a className="button button-gold" href={wa}>RESERVE YOUR MOMENT <ArrowUpRight size={16}/></a><a className="text-link" href="#the-experience">DISCOVER FIFTEEN <ArrowDown size={14}/></a></div></div>
