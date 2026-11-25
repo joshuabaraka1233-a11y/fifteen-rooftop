@@ -254,3 +254,50 @@ section[id]{scroll-margin-top:112px}
   .header>.desktop-nav{gap:clamp(9px,1.5vw,14px)}
   .header>.desktop-nav button{font-size:9px}
 }
+
+
+/* Navigation refinement: clean brand row + spacious, readable section bar */
+@media (min-width:681px){
+  header.header{
+    display:grid!important;
+    grid-template-columns:1fr auto!important;
+    grid-template-rows:58px 48px!important;
+    grid-template-areas:"brand cta" "nav nav"!important;
+    min-height:106px!important;height:auto!important;
+    padding:8px 5.2% 0!important;
+    column-gap:24px!important;row-gap:0!important;
+    align-items:center!important;
+  }
+  header.header>.brand{grid-area:brand!important;align-self:center}
+  header.header>.header-cta{grid-area:cta!important;align-self:center}
+  header.header>.desktop-nav{
+    grid-area:nav!important;
+    display:flex!important;justify-content:center!important;align-items:center!important;
+    width:100%!important;min-width:0!important;min-height:48px!important;
+    margin:0!important;padding:0 8px!important;
+    gap:clamp(18px,3vw,38px)!important;
+    border-top:1px solid rgba(200,169,108,.22)!important;
+    background:linear-gradient(90deg,transparent,rgba(255,255,255,.018),transparent)!important;
+  }
+  header.header>.desktop-nav button{
+    display:inline-flex!important;align-items:center!important;
+    white-space:nowrap!important;padding:13px 0!important;
+    font-size:11px!important;line-height:1.2!important;
+    letter-spacing:.55px!important;font-weight:600!important;
+    color:#d4d0c6!important;position:relative!important;
+    transition:color .2s ease!important;
+  }
+  header.header>.desktop-nav button::after{
+    content:"";position:absolute;left:0;right:100%;bottom:5px;
+    height:1px;background:#c8a96c;transition:right .25s ease;
+  }
+  header.header>.desktop-nav button:hover,
+  header.header>.desktop-nav button.nav-active{color:#d8b879!important}
+  header.header>.desktop-nav button:hover::after,
+  header.header>.desktop-nav button.nav-active::after{right:0}
+}
+@media (min-width:681px) and (max-width:1050px){
+  header.header{padding-left:3.5%!important;padding-right:3.5%!important}
+  header.header>.desktop-nav{gap:clamp(12px,2vw,22px)!important}
+  header.header>.desktop-nav button{font-size:10px!important}
+}
