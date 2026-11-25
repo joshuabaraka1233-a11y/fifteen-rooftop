@@ -120,3 +120,52 @@ section[id]{scroll-margin-top:105px}
  html{scroll-padding-top:86px}
  section[id]{scroll-margin-top:86px}
 }
+
+
+/* Final navigation, drinks-heading and scroll-motion polish */
+.full-menu-head .eyebrow>span:first-child{
+  width:auto;height:auto;background:none;display:inline-block;
+  margin:0 0 0 9px;color:inherit;white-space:nowrap;
+}
+.drinks-section .full-menu-head .eyebrow{
+  display:flex;justify-content:center;align-items:center;gap:8px;
+  flex-wrap:wrap;line-height:1.6;text-align:center;
+}
+.drinks-section .full-menu-head .eyebrow>span:first-child{
+  width:auto;height:auto;background:none;display:inline;
+  margin:0;color:inherit;white-space:nowrap;
+}
+.drinks-section .full-menu-head h2{
+  font-size:clamp(58px,6.4vw,84px);line-height:1.05;
+  letter-spacing:-2px;margin:18px 0 16px;
+}
+.drinks-section .full-menu-head>p:last-child{margin:0 auto;max-width:460px}
+.desktop-nav{gap:clamp(7px,.95vw,15px)}
+.desktop-nav button{font-size:clamp(8px,.72vw,10px);padding:12px 0}
+.header{gap:16px}
+html{scroll-behavior:smooth;scroll-padding-top:112px}
+section[id]{scroll-margin-top:112px}
+.scroll-reveal{opacity:1;transform:none}
+.has-scroll-reveal .scroll-reveal{
+  opacity:0;transform:translateY(26px);
+  transition:opacity .75s ease,transform .75s cubic-bezier(.2,.7,.2,1);
+}
+.has-scroll-reveal .scroll-reveal.is-visible{opacity:1;transform:translateY(0)}
+.story-pillars article:nth-child(2),.food-menu-column:nth-child(2){transition-delay:.08s}
+.menu-card-offset{transition-delay:.12s}
+.rule-item:nth-child(even){transition-delay:.08s}
+@media(max-width:1100px) and (min-width:681px){
+ .desktop-nav{gap:7px}
+ .desktop-nav button{font-size:8px;letter-spacing:0}
+}
+@media(max-width:680px){
+ html{scroll-padding-top:86px}
+ section[id]{scroll-margin-top:86px}
+ .drinks-section .full-menu-head .eyebrow{font-size:9px;letter-spacing:1.5px;gap:6px}
+ .drinks-section .full-menu-head h2{font-size:55px;line-height:1.08;margin:17px 0}
+ .has-scroll-reveal .scroll-reveal{transform:translateY(18px)}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ .has-scroll-reveal .scroll-reveal{opacity:1;transform:none;transition:none}
+}
