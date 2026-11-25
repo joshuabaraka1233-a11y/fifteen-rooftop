@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ArrowDown, ArrowUpRight, Instagram, MapPin, Menu as MenuIcon, Phone, X } from "lucide-react";
 
 const phone = "254111151515";
