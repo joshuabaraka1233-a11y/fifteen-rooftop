@@ -137,10 +137,50 @@ export default function Home() {
       </section>
 
       <section className="drinks-section section-pad" id="drinks">
-        <div className="full-menu-head"><p className="eyebrow">THE GENERALI BAR <span>— DRINKS MENU</span></p><h2>Raise a <em>glass.</em></h2><p>Classic pours, refreshing favourites and cocktails for the moment.</p></div>
+        <div className="full-menu-head">
+          <p className="eyebrow">THE GENERALI BAR <span>— DRINKS MENU</span></p>
+          <h2>Raise a <em>glass.</em></h2>
+          <p>Classic pours, refreshing favourites and cocktails for the moment.</p>
+        </div>
         <div className="drinks-grid">
-          <div className="drink-panel"><h3>Mocktails & Refreshers</h3>{[["Boomerang","650"],["Mint Lemonade","650"],["Spicy Carolina","650"],["Strawberry Mojito","650"]].map(x=><MenuLine key={x[0]} name={x[0]} price={x[1]}/>}<h3>Soft Drinks & Water</h3>{[["Soda","300"],["Red Bull","500"],["Still water","400"],["Sparkling water","450"]].map(x=><MenuLine key={x[0]} name={x[0]} price={x[1]}/>}<h3>Beer & Cider</h3>{["Guinness 325ml","Tusker Lager","Tusker Lite","Tusker Malt","White Cap Crisp 300ml","White Cap Lager 500ml","Hunters Dry Cider","Savanna Angry Lemon Cider","Savanna Cider","Heineken Zero","Heineken 330ml","Corona 330ml"].map((x,i)=><MenuLine key={x} name={x} price={i===9?"550":i===10||i===11?"550":"500"}/>)}</div>
-          <div className="drink-panel"><h3>Signature Cocktails</h3>{[["Captain Morgan Dark / Blue Curaçao / Gin / Tequila / Vodka / Sprite","1,500"],["Magnun – Martini, apple juice, pomegranate juice and fresh strawberries","1,200"],["M-16 – Monkey Shoulder, Johnnie Walker Red Label, ginger syrup, lime and honey","1,200"],["Air Force 1 – Jack Daniel’s, triple sec and cranberry juice","1,200"],["Colonel Sour – Gin, triple sec, lime and grenadine syrup","1,200"],["Generali – Gin, blueberry, red chilli, pineapple and lime","1,100"],["Revolver – Captain Morgan Dark, Malibu, orange juice and pineapple juice","1,100"],["Colt – Tequila, agave syrup and lime juice","1,100"]].map(x=><MenuLine key={x[0]} name={x[0]} price={x[1]}/>}<h3>Shooters</h3><MenuLine name="Lethal Lion" price="600"/><MenuLine name="B52" price="600"/><p className="drink-note">Classic mixed drinks are available on request and subject to ingredients availability. Please ask our team about non-alcoholic options.</p></div>
+          <div className="drink-panel">
+            <h3>Mocktails &amp; Refreshers</h3>
+            {[
+              ["Boomerang", "650"], ["Mint Lemonade", "650"],
+              ["Spicy Carolina", "650"], ["Strawberry Mojito", "650"]
+            ].map(([name, price]) => <MenuLine key={name} name={name} price={price} />)}
+            <h3>Soft Drinks &amp; Water</h3>
+            {[
+              ["Soda", "300"], ["Red Bull", "500"],
+              ["Still water", "400"], ["Sparkling water", "450"]
+            ].map(([name, price]) => <MenuLine key={name} name={name} price={price} />)}
+            <h3>Beer &amp; Cider</h3>
+            {[
+              ["Guinness 325ml", "500"], ["Tusker Lager", "500"],
+              ["Tusker Lite", "500"], ["Tusker Malt", "500"],
+              ["White Cap Crisp 300ml", "500"], ["White Cap Lager 500ml", "500"],
+              ["Hunters Dry Cider", "500"], ["Savanna Angry Lemon Cider", "500"],
+              ["Savanna Cider", "500"], ["Heineken Zero", "550"],
+              ["Heineken 330ml", "550"], ["Corona 330ml", "550"]
+            ].map(([name, price]) => <MenuLine key={name} name={name} price={price} />)}
+          </div>
+          <div className="drink-panel">
+            <h3>Signature Cocktails</h3>
+            {[
+              ["Captain Morgan Dark / Blue Curaçao / Gin / Tequila / Vodka / Sprite", "1,500"],
+              ["Magnun – Martini, apple juice, pomegranate juice and fresh strawberries", "1,200"],
+              ["M-16 – Monkey Shoulder, Johnnie Walker Red Label, ginger syrup, lime and honey", "1,200"],
+              ["Air Force 1 – Jack Daniel’s, triple sec and cranberry juice", "1,200"],
+              ["Colonel Sour – Gin, triple sec, lime and grenadine syrup", "1,200"],
+              ["Generali – Gin, blueberry, red chilli, pineapple and lime", "1,100"],
+              ["Revolver – Captain Morgan Dark, Malibu, orange juice and pineapple juice", "1,100"],
+              ["Colt – Tequila, agave syrup and lime juice", "1,100"]
+            ].map(([name, price]) => <MenuLine key={name} name={name} price={price} />)}
+            <h3>Shooters</h3>
+            <MenuLine name="Lethal Lion" price="600" />
+            <MenuLine name="B52" price="600" />
+            <p className="drink-note">Classic mixed drinks are available on request and subject to ingredient availability. Please ask our team about non-alcoholic options.</p>
+          </div>
         </div>
         <div className="drinks-note">Please enjoy responsibly. Guests must be 18 years or older to purchase or consume alcohol.</div>
       </section>
